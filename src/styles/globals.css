@@ -1,0 +1,111 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-inter);
+}
+
+/* hover effects */
+
+.nav {
+  position: relative;
+}
+.nav::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  transition: ease-out 0.2s;
+}
+.nav:hover::after {
+  width: 100%;
+}
+
+/* animations */
+
+.fade-in {
+  animation: fade-in 0.3s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.chakra-step__separator {
+  margin-inline-start: 0px !important;
+}
+.chakra-step__separator[data-status="complete"] {
+  background: #50c4d3 !important;
+}
+.chakra-step__indicator[data-status="active"] {
+  border-color: #50c4d3 !important;
+}
+
+.chakra-step__indicator[data-status="complete"] {
+  background: #50c4d3 !important;
+}
+.chakra-step__indicator[data-status="active"]::after {
+  content: " ";
+  position: absolute;
+  height: 150%;
+  width: 150%;
+  border-radius: 50%;
+  opacity: 0.2;
+  background: #50c4d3 !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* user layout */
+
+.user-sidebar--active {
+  background-color: black;
+  color: white;
+}
+.user-sidebar--inactive:hover {
+  background-color: #dae3e5;
+}
+.user-sidebar .user-sidebar-icon,
+.user-sidebar {
+  transition: ease-out 0.2s;
+}
+
+.user-sidebar:hover .user-sidebar-icon {
+  transform: rotate(45deg);
+}

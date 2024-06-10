@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloudnine Mailer</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+      }
+      .code-box {
+        color: #258591;
+        font-weight: 700;
+        padding: 10px 20px;
+        border: 1px solid #9daeb05e;
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 20px;
+      }
+      .text-muted {
+        color: #9daeb0;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="container" role="presentation">
+      <tr>
+        <td>
+          <table role="presentation">
+            <tr>
+              <td style="padding-bottom: 20px;">
+                <h2>Cloudnine - д тавтай морил!</h2>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-muted" style="padding-bottom: 40px;">
+                Та дараах кодыг ашиглан бүртгэлээ баталгаажуулна уу.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code-box">
+                  {{ .Token }}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-muted" style="padding-top: 40px;">
+                Энэхүү и-мэйл нь эмзэг мэдээлэл тул та хэн нэгэн рүү бүү дамжуулаарай.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
